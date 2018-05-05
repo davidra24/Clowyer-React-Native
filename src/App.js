@@ -8,6 +8,8 @@ import React, { Component } from 'react';
 import Splash from './components/Splash';
 import Home from './components/Home';
 import LogIn from './components/LogIn';
+import UserScreen from './components/UserScreen';
+import RegisterScreen from './components/RegisterScreen';
 import {
   Platform,
   StyleSheet,
@@ -24,11 +26,13 @@ export default class App extends Component<Props>{
       <Router>
         <Stack key="root">
           <Scene key="splash" component={Splash} hideNavBar/>
-          <Scene key="login" component={LogIn} title="LogIn"/>
           <Scene key="home" component={Home} hideNavBar/>
+          <Scene key="logIn" component={LogIn} hideNavBar/>
+          <Scene key="userScreen" component={UserScreen}/>
+          <Scene key="registerScreen" component={RegisterScreen}/>
         </Stack>
       </Router>
-    );
+    )
   }
 }
 

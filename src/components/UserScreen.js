@@ -1,24 +1,30 @@
-//decide donde inicia el usuario al abrir la app
+//Pantalla de Inicia cuando ya se ha loggueado el usuario
 import React, { Component } from 'react';
 import {
   View,
+  ImageBackground,
+  Text,
+  TextInput,
+  Button,
   Platform,
   StyleSheet,
 } from 'react-native';
-import LogIn from './LogIn';
-import {Scene, Router, Stack} from 'react-native-router-flux';
 
+const backgroundImg = require('../assets/fondo.png');
 type Props = {};
 export default class Home extends Component<Props> {
-  render() {
-    return (
-      /*if(Props.log == 0){*/
-        <LogIn/>
-    /*  }else{
-        <UserScreen/>
-      }*/
-    );
-  }
+    action(){
+
+    }
+    render() {
+        return (
+          <View style = {styles.container}>
+            <ImageBackground source={backgroundImg} style={styles.backgroundImage}>
+                
+            </ImageBackground>
+          </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({

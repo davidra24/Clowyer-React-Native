@@ -15,7 +15,7 @@ export default class SplashScreen extends Component<Props> {
         return (
           <View style = {styles.container}>
             <Image style = {styles.images} source = {img}/>
-            <ActivityIndicator style = {styles.spinner} size="large" color="#1c6e8c" />
+            <ActivityIndicator style = {styles.spinner} size="large" color="#772e25" />
           </View>
         );
     }
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#d0ccd0',
+    backgroundColor: '#edddd4',
   },
   images:{
     justifyContent: 'center',

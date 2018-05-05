@@ -18,7 +18,7 @@ import { Actions } from 'react-native-router-flux';
 function timeOut(){
   setTimeout(function() {
     Actions.home();
-  }, 5000);
+  }, 2000);
 }
 
 type Props = {};
