@@ -6,42 +6,30 @@ import {
   StyleSheet,
 } from 'react-native';
 import LogIn from './LogIn';
-import {Scene, Router, Stack} from 'react-native-router-flux';
+import UserScreen from './UserScreen';
+import styleSheet from '../styles/Styles';
 
+const styles = styleSheet;
 type Props = {};
 export default class Home extends Component<Props> {
+  //this.Props.isLoggedIn;
+  constructor(){
+    super();
+
+  }
+  isLogged(logged){
+    if (logged) {
+      return <UserScreen />;
+    }else{
+      return <LogIn />;
+    }
+  }
   render() {
+    const isLoggedIn = true;
     return (
-      /*if(Props.log == 0){*/
-        <LogIn/>
-    /*  }else{
-        <UserScreen/>
-      }*/
+      <View style = {styles.bigContainer}>
+        {this.isLogged(isLoggedIn)}
+      </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#e5e7e6',
-  },
-  images:{
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  boton : {
-    margin: 10
-  },
-  bienvenido:{
-     alignItems: 'center', justifyContent: 'center', color: '#000000', marginTop: 5
-  },
-  backgroundImage:{
-    flex: 1,
-    width : '100%',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});

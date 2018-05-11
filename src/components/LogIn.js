@@ -10,8 +10,10 @@ import {
   ImageBackground
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import styleSheet from '../styles/Styles';
 
 type Props = {};
+const styles = styleSheet;
 const images = {
   logo: require("../assets/login.png"),
   backgroundLogIn: require("../assets/fondo.png")
@@ -54,41 +56,3 @@ export default class LogIn extends Component<Props> {
       );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#e5e7e6',
-  },
-  boton : {
-    margin: 10,
-    width: '100%',
-    height: '8%'
-  },
-  bienvenido:{
-     alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', marginTop: 5
-  },
-  rectangle:{
-    backgroundColor: '#19727850',
-    padding: '10%',
-    width: '80%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  logoContainer : {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  logo : {
-    width: '40%',
-    height: '40%',
-  },
-  backgroundImage:{
-    flex: 1,
-    width : '100%',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});

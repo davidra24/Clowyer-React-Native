@@ -7,7 +7,9 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
+import styleSheet from '../styles/Styles';
 
+const styles = styleSheet;
 type Props = {};
 export default class RegisterScreen extends Component<Props>{
     render() {
@@ -24,12 +26,3 @@ onActionSelected: function(position) {
     showSettings();
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#e5e7e6',
-  }
-});

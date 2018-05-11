@@ -28,7 +28,7 @@ export default class App extends Component<Props>{
           <Scene key="splash" component={Splash} hideNavBar/>
           <Scene key="home" component={Home} hideNavBar/>
           <Scene key="logIn" component={LogIn} hideNavBar/>
-          <Scene key="userScreen" component={UserScreen}/>
+          <Scene key="userScreen" component={UserScreen} hideNavBar/>
           <Scene key="registerScreen" component={RegisterScreen}/>
         </Stack>
       </Router>
