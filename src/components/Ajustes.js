@@ -14,25 +14,17 @@ import {
   Image
 } from 'react-native';
 import styleSheet from '../styles/Styles';
-import { Actions } from 'react-native-router-flux';
 
 const styles = styleSheet;
 type Props = {};
-function addCaso(){
-  Actions.agregarCaso();
-}
-export default class Casos extends Component<Props>{
+export default class Ajustes extends Component<Props>{
   static navigationOptions = {
-    tabBarLabel: 'Casos'
+    tabBarLabel: 'Ajustes'
   }
   render() {
     return (
       <View style = {styles.container}>
-        <Text>Hola mundo casos</Text>
-        <TouchableHighlight style={styles.addButton}
-          underlayColor='#ff7043' onPress={()=>{addCaso()}}>
-          <Text style={{fontSize: 50, color: 'white'}}>+</Text>
-        </TouchableHighlight>
+        <Text>Hola mundo ajuses</Text>
       </View>
     )
   }

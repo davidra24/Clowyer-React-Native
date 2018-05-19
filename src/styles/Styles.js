@@ -15,6 +15,12 @@ export default StyleSheet.create({
     width: '100%',
     height: '8%'
   },
+  botonGuardar : {
+    justifyContent: 'center',
+    backgroundColor: "#c44536",
+    width: '100%',
+    height: '10%'
+  },
   bienvenido:{
      alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', marginTop: 5
   },
@@ -22,6 +28,15 @@ export default StyleSheet.create({
     backgroundColor: '#19727850',
     padding: '10%',
     width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  itemConsult:{
+    flex: 1,
+    backgroundColor: '#19727850',
+
+    width: '100%',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -60,5 +75,34 @@ export default StyleSheet.create({
   },
   spinner:{
       marginTop: 15
+  },
+  addButton: {
+    backgroundColor: '#c44536',
+    borderColor: '#c44536',
+    borderWidth: 1,
+    height: 80,
+    width: 80,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 20,
+    right:20,
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    shadowOffset: {
+      height: 1,
+      width: 0
+    }
+  },
+  formText:{
+     alignItems: 'center', justifyContent: 'center', color: '#000', marginTop: 5
+  },
+  formTextInput:{
+     alignItems: 'center', justifyContent: 'center', color: '#000', marginTop: 5
+  },
+  pickerStyle:{
+    height: 40, width: '80%', color: '#FFFFFF', alignItems:'center'
   }
 });

@@ -82,11 +82,6 @@ export default class RegisterScreen extends Component<Props> {
                     />
                     <Text style = {styles.bienvenido}>Laboral</Text>
                   </View>
-                  <Button
-                    style={styles.boton}
-                    onPress={this.saveChanges}
-                    title="Guardar"
-                    color="#841584"/>
                 </View>
               </View>
             </ImageBackground>

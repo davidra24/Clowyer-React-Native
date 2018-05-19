@@ -23,7 +23,7 @@ function timeOut(){
   }, 2000);
 }
 
-type Props = {};
+type Props = {};8
 const img = require("../assets/icon.png");
 export default class Splash extends Component<Props>{
   render() {
