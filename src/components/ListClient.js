@@ -9,6 +9,7 @@ TouchableHighlight
 } from 'react-native';
 import styleSheet from '../styles/Styles';
 import Swipeout from 'react-native-swipeout';
+import ItemClient from './ItemClient'
 
 const styles = styleSheet;
 type Props = {};
@@ -29,15 +30,13 @@ export default class ListClient extends Component{
     })
   }
   render() {
-
       return (
         <View>
           <FlatList data = {this.state.clientes}
             keyExtractor = {(x, i) => i}
             renderItem = {({ item }) =>
-              <Text style={styles.itemConsult}>
-                {item.name}
-              </Text>
+              <ItemClient style = {styles.itemConsult} tipoCliente = {item.type} nombreCliente = {item.name} telefonoCliente = {item.phone}>
+              </ItemClient>
             }
           />
         </View>

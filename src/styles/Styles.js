@@ -31,15 +31,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  itemConsult:{
-    flex: 1,
-    backgroundColor: '#19727850',
-
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   images:{
     justifyContent: 'center',
     alignItems: 'center',
@@ -104,5 +95,31 @@ export default StyleSheet.create({
   },
   pickerStyle:{
     height: 40, width: '80%', color: '#FFFFFF', alignItems:'center'
+  },
+  itemConsult:{
+    flex: 1,
+    backgroundColor: '#19727850',
+    flexDirection:'row'
+  },
+  containerList : {
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  tipoCliente : {
+    backgroundColor: '#197278',
+    color: "#FFFFFF",
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontSize: 40,
+    borderRadius: 50,
+  },
+  nombreCliente : {
+    fontSize: 20,
+    textAlign: 'center',
+  },
+  telefonoCliente : {
+    fontSize: 10,
+    textAlign: 'center',
   }
 });

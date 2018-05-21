@@ -1,5 +1,5 @@
 CRUD
-slide List
+modal component
 sesion iniciada
 iniciar sesion
 Usar camara

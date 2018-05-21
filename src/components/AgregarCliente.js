@@ -20,47 +20,42 @@ import styleSheet from '../styles/Styles';
 import DatePicker from 'react-native-datepicker'
 import PhoneInput from 'react-native-phone-input'
 import Actions from 'react-native-router-flux'
-//import {agregarClientes} from '../webService/apis'
+import {agregarClientes} from '../webService/apis'
+import {addClientes} from '../webService/apis'
+
 const styles = styleSheet;
 type Props = {};
 const images = {
   background: require("../assets/fondoCliente.png")
 }
-async function SaveClient(){
-  const db = {
-    id : this.state.cedula,
-    name : this.state.nombre,
-    type : this.state.tipoCliente,
-    date : this.state.date,
-    phone : this.state.telefono
-  }
-  apiPost.postCli(db);
-}
 export default class AgregarCliente extends Component<Props>{
   constructor(props){
     super(props);
     this.state = {
-      cedula: ' ',
+      identification: ' ',
       nombre: ' ',
-      tipocliente:  ' ',
+      tipocliente:  'N',
       date: ' ',
       telefono: ' '
    }
-   //this.SaveClient = this.SaveClient.bind(this);
   }
-  /*componentDidMount(){
-    Actions.refresh({
-      right: () => (<Text onPress = {this.SaveClient}>{'Guardar'}</Text>)
-    })
-  }*/
+  SaveClient(){
+    const db = {
+      identification : this.state.identification,
+      name : this.state.nombre,
+      type : this.state.tipocliente,
+      date : this.state.date,
+      phone : this.state.telefono
+    }
+    agregarClientes(db);
+  }
   render() {
-
     return (
       <View style = {styles.container}>
         <ImageBackground source={images.background} style={styles.backgroundImage}>
           <View style = {styles.rectangle}>
             <Text style = {styles.bienvenido}>Cedula: </Text>
-            <TextInput style = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(cedula) => {this.setState({cedula})}}/>
+            <TextInput keyboardType={'number-pad'} style = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(identification) => {this.setState({identification})}}/>
             <Text style = {styles.bienvenido}>Nombres y apellidos: </Text>
             <TextInput style = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(nombre) => {this.setState({nombre})}}/>
             <Text style = {styles.bienvenido}>Tipo de cliente: </Text>
@@ -97,8 +92,9 @@ export default class AgregarCliente extends Component<Props>{
                     onDateChange={(date) => {this.setState({date: date})}}
                   />
             <Text style = {styles.bienvenido}>Telefono: </Text>
-            <PhoneInput ref='phone'textStyle = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(telefono) => {this.setState({telefono})}}/>
-            <TouchableHighlight style={styles.botonGuardar} onPress={()=>SaveClient()}><Text>Guardar</Text></TouchableHighlight>
+            <TextInput keyboardType={'phone-pad'} style = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(telefono) => {this.setState({telefono})}}/>
+            {/*<PhoneInput ref='phone'textStyle = {{width: '100%', height: 40, color: '#FFFFFF', fontSize: 20}} underlineColorAndroid='white' onChangeText={(telefono) => {this.setState({telefono})}}/>*/}
+            <TouchableHighlight style={styles.botonGuardar} onPress={()=>this.SaveClient()}><Text>Guardar</Text></TouchableHighlight>
           </View>
         </ImageBackground>
       </View>
